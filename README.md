@@ -1,3 +1,14 @@
+> ⚠️ **Caution: Repository no longer supported!** ⚠️
+>
+> This repository is deprecated and no longer actively maintained.
+> It has been superseded by the alternative download tool `ecdownload` included in the **earthcarekit** Python package, available here: https://github.com/TROPOS-RSD/earthcarekit
+>
+> `ecdownload` is the successor tool to `oads-download`.
+> It offers almost the same workflow and now also supports data download from the [EarthCARE MAAP server](https://portal.maap.eo.esa.int/earthcare/).
+> Users switching to the new tool are advised to read the new documentation pages here carefully: https://tropos-rsd.github.io/earthcarekit/.
+>
+> **Most notably, the default folder structure of the data download folder has been changed**, but it can be adjusted to match the old tool by editing the configuration file (see https://tropos-rsd.github.io/earthcarekit/cli/ecdownload/).
+
 # oads-download
 `oads_download.py` is a Python script designed to download [EarthCARE](https://earth.esa.int/eogateway/missions/earthcare) data products from ESA's Online Access and Distribution System (OADS). The execution of the script is divided into two parts:
 1. Based on user inputs via the command-line search requests are send to the OpenSearch API data catalogue [EO-CAT](https://eocat.esa.int/).
@@ -15,6 +26,7 @@ If you have questions please create an issue or contact koenig@tropos.de.
 </div>
 
 ## Table of Contents
+- [Known issues](https://github.com/koenigleon/oads-download?tab=readme-ov-file#known-issues)
 - [Setup](https://github.com/koenigleon/oads-download?tab=readme-ov-file#setup)
 - [Usage](https://github.com/koenigleon/oads-download?tab=readme-ov-file#usage)
     - [Logging](https://github.com/koenigleon/oads-download?tab=readme-ov-file#logging)
@@ -30,6 +42,10 @@ If you have questions please create an issue or contact koenig@tropos.de.
   - [Level 2b products](https://github.com/koenigleon/oads-download?tab=readme-ov-file#level-2b-products)
   - [Auxiliary data](https://github.com/koenigleon/oads-download?tab=readme-ov-file#auxiliary-data)
   - [Orbit data](https://github.com/koenigleon/oads-download?tab=readme-ov-file#orbit-data)
+
+## Known issues
+
+- When attempting to download data from a larger time range (e.g., one month) the data limit per search request will be reached (2000 files)
 
 ## Setup
 
